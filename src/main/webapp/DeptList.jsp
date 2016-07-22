@@ -14,14 +14,10 @@
 	<%
 		DeptMapper mapper = MainApplication.ctx.getBean(DeptMapper.class);
 		List<Dept> depts = mapper.readAll();
-/* 		for (Dept dept : depts) {
+ 		for (Dept dept : depts) {
 			System.out.println(dept.getDeptno() + " " + dept.getDname() + " " + dept.getLoc());
 			out.println(dept.getDeptno() + " " + dept.getDname() + " " + dept.getLoc() + "<br>");
-		} */
-		
-		depts.forEach(dept -> {
-			System.out.println(dept.getDeptno() + " " + dept.getDname() + " " + dept.getLoc());
-		});
+		}
 	%>
 </body>
 </html>
